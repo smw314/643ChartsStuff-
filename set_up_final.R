@@ -236,21 +236,3 @@ off_data_2023 <- off_data_2023 %>%
 write_csv(fb_data_2023, '2023_fb_data.csv')
 write_csv(bb_data_2023, '2023_bb_data.csv')
 write_csv(off_data_2023, '2023_off_data.csv')
-
-
-
-
-
-
-
-
------ 
-  
-  
-  
-all <- rbind(pitches_2023, pitches)
-
-csw_summary <- all %>% 
-  group_by(tagged_pitch_type) %>% 
-  summarise(n = n(),
-            csw = mean(csw))
